@@ -1,10 +1,14 @@
 {
+
   "name": "weatherapp",
+  "homepage": "https://ThakurSahab14.github.io/WeatherApp",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
    "start": "node ./src/index.js"
   },
   "repository": {
@@ -17,7 +21,6 @@
   "bugs": {
     "url": "https://github.com/ThakurSahab14/Weather-App/issues"
   },
-  "homepage": "https://github.com/ThakurSahab14/Weather-App#readme",
   "dependencies": {
     "express": "^4.18.1",
     "hbs": "^4.2.0"
