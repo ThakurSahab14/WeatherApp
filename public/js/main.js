@@ -4,13 +4,30 @@ const city_name=document.getElementById('city_name');
 const temp=document.getElementById('temp');
 const temp_status=document.getElementById('temp_status');
 const datahide=document.querySelector('.middle_layer');
+submitBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    if (cityName.value === '') {
+      alert('Please enter a city name before searching.');
+    } else {
+      tempInformation.style.display = 'block';
+    }
+  });
 
+// const submitBtn = document.getElementById('submitBtn');
+const tempInformation = document.querySelector('.tempInformation');
+
+submitBtn.addEventListener('click', (e) => {
+  e.preventDefault();
+  tempInformation.style.display = 'block';
+});
 
 const getInfo=async(event)=>{
     event.preventDefault();
     let cityVal=cityName.value;
     if(cityVal == ""){
-        city_name.innerText=`Please enter the city before serach`;
+        city_name.innerText=`Please enter the city before Search`;
+        datahide.classList.add('data_hide');
+        tempInformation.style.display = 'none'; 
     }
     else{
         try{
@@ -34,7 +51,7 @@ const getInfo=async(event)=>{
             datahide.classList.remove('data_hide');
         }
         catch{
-            city_name.innerText=`Please enter the proper city name`;
+            city_name.innerText=`Please Enter the Correct city name`;
             datahide.classList.add('data_hide');
         }  
     } 

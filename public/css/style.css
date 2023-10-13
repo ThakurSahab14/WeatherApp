@@ -30,6 +30,9 @@ html{
     background-color:var(--main-bg);
 }
 
+body {
+    overflow: hidden;
+  }
 .navbar{
     color:#fff;
     background-color: var(--main-bg);
@@ -137,7 +140,7 @@ footer p{
     font-size:1.8rem;
 }
 
-@media(max-width:768px){
+/* @media(max-width:768px){
     .main_header_left{
         height:auto;
         margin:5rem 0;
@@ -146,10 +149,10 @@ footer p{
         height:auto;
         margin-top:3rem;
     }
-}
+} */
 
 .temp_form{
-    width:60%;
+    width:50%;
     position:relative;
     margin: 10rem auto 6rem;
 }
@@ -183,14 +186,14 @@ footer p{
 }
 
 .temp_form input[type="submit"]:hover{
-    color:#009ad8;
-    background-color: #fff;
+    color:floralwhite;
+    background-color: #0f3645;
 }
 
 .tempInformation{
-    width:60%;
-    margin:auto;
-    min-height:20rem;
+    width:50%;
+    margin:0 auto;
+    min-height:10rem;
     background-color: #323544;
     border-radius: 1rem;
     font-family: 'Roboto' , sans-serif;
@@ -259,3 +262,79 @@ font-weight:5rem;
 .textInformation{
     width:auto;
 }
+
+/* For mobile devices */
+@media only screen and (max-width: 500px) {
+        .container_fluid {
+        padding: 0;
+        }
+        .main_header {
+        padding: 0px;
+        }
+    .main_content {
+      margin-bottom: 0px;
+      height:10vh;
+    }
+    .temp_form {
+      display: flex;
+      flex-direction: column;
+      width:100%;
+    }
+    #cityName {
+      margin-bottom: 10px;
+    }
+    .tempInformation {
+      text-align: center;
+      font-size: 10px;
+    }
+    .tempInformation {
+        width: 100%;
+        margin: 0 auto;
+        min-height: 10rem;
+        background-color: #323544;
+        border-radius: 1rem;
+        font-family: 'Roboto' , sans-serif;
+        margin-bottom: 100px;
+    }
+    .main_layer {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .middle_layer {
+      margin-top: 20px;
+    }
+    #temp {
+      font-size: 3rem;
+    }
+    #temp_status {
+      font-size: 2rem;
+    }
+    /* For mobile devices */
+
+    .temp_form {
+      position: relative;
+    }
+    .temp_form input[type="submit"] {
+      position: static;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      width: 100%;
+      padding: 10px;
+    }
+    footer {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        background-color: var(--main-bg);
+        margin-top: 20px;
+      }
+      footer p {
+        line-height: 2rem;
+        font-size: 1.4rem;
+        margin: 0;
+        text-align: center;
+        color: #fff;
+      }
+  }
+  
